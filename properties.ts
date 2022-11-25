@@ -5,13 +5,10 @@ interface Point{
     x: number,
     y: number
 }
-
-
 // interface ile kullanacağımız fonksiyonların şemasını çıkarttık. == planını hazırlıyoruz sadece
 interface Vehicle{
     travelTo(point: Point): void;
 }
-
 class Taxi implements Vehicle{
 
     constructor(private _location: Point , private color?: string){} //color'a soru işareti attığımızdan optional olarak tanımlamış oluyoruz : istersek girmeyebilriz.
@@ -19,7 +16,6 @@ class Taxi implements Vehicle{
     travelTo(point: Point): void{
         console.log(`taksi x: ${this._location.x} Y: ${this._location.y} dan x: ${point.x} Y: ${point.y} konumuna gidiyor.`);
     }
-
     get Location(){
         return this._location;
     }
@@ -29,7 +25,6 @@ class Taxi implements Vehicle{
         }
         this._location = value;
     }
-
 }
 
 
